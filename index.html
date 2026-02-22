@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Banco Amigos do Pets</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+.header {
+    background-color: #1e73be;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+.content {
+    padding: 30px;
+}
+.button {
+    display: inline-block;
+    margin: 15px 10px 0 0;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.primary {
+    background-color: #1e73be;
+    color: #ffffff;
+}
+.secondary {
+    background-color: #e6f0fa;
+    color: #1e73be;
+    border: 1px solid #1e73be;
+}
+.hidden {
+    display: none;
+}
+.footer {
+    background-color: #f0f2f5;
+    padding: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #777777;
+}
+img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        Banco Amigos do Pets 🐾
+    </div>
+
+    <!-- TELA PRINCIPAL -->
+    <div class="content" id="home">
+    <h2>Seu cartão virou petisco? 🐶💳 Nós resolvemos!</h2>
+
+    <p><strong>Olá, Mariana Silva!</strong></p>
+
+    <p>
+    Ficamos sabendo que seu cartão teve um encontro inesperado com um amigo de quatro patas 🐾. 
+    Acontece — principalmente quando temos um pet curioso em casa!
+    </p>
+
+    <p>
+    Mas pode ficar tranquila: já bloqueamos o cartão anterior por segurança e um novo cartão já está a caminho da sua residência.
+    </p>
+
+    <p>
+    E como a sua história conquistou a internet e gerou muitos comentários carinhosos, 
+    decidimos transformar esse momento em algo ainda mais especial! 💙
+    </p>
+
+    <p>
+    Criamos a campanha “Banco Amigos do Pets”, reforçando nosso carinho por quem ama seus companheiros de quatro patas. 
+    Afinal, imprevistos acontecem — e estamos aqui para ajudar em todos eles.
+    </p>
+
+    <p>
+    Conte sempre com a gente!
+    </p>
+
+    <p>
+    Atenciosamente,<br>
+    <strong>Equipe Banco</strong>
+    </p>
+    
+        <div class="button primary" onclick="mostrarRota()">Acompanhar novo cartão</div>
+        <div class="button secondary" onclick="mostrarCampanha()">Conheça a campanha</div>
+    </div>
+
+    <!-- TELA ROTA -->
+    <div class="content hidden" id="rota">
+        <h2>📦 Acompanhamento do Cartão</h2>
+        <p><strong>Status:</strong> 🚚 Em rota de entrega</p>
+        <p>✔ Cartão emitido</p>
+        <p>✔ Enviado para transportadora</p>
+        <p><strong>🚚 Saiu para entrega</strong></p>
+
+        <div class="button primary" onclick="voltar()">⬅ Voltar</div>
+    </div>
+
+    <!-- TELA CAMPANHA -->
+    <div class="content hidden" id="campanha">
+        <h2>🐾 Banco Amigos do Pets</h2>
+        <p>Amamos quem ama seus pets 💙</p>
+        <img src="campnha.jpg.png" alt="Campanha Pets">
+
+        <div class="button primary" onclick="voltar()">⬅ Voltar</div>
+    </div>
+
+    <div class="footer">
+        © 2026 Banco Amigos do Pets — Todos os direitos reservados.
+    </div>
+
+</div>
+
+<script>
+function mostrarRota() {
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("rota").classList.remove("hidden");
+}
+
+function mostrarCampanha() {
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("campanha").classList.remove("hidden");
+}
+
+function voltar() {
+    document.getElementById("rota").classList.add("hidden");
+    document.getElementById("campanha").classList.add("hidden");
+    document.getElementById("home").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
